@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+/*
+ * Design tokens. Change the colours here and the whole app follows.
+ * Use them in classes like bg-surface, text-muted, border-border, bg-primary.
+ */
+:root {
+  --bg: #f6f7f9;
+  --surface: #ffffff;
+  --surface-2: #f1f3f6;
+  --border: #e3e6eb;
+  --text: #14181f;
+  --muted: #5d6675;
+  --primary: #0f6b5f;
+  --primary-hover: #0c5a50;
+  --primary-soft: #e3f2ef;
+  --primary-fg: #ffffff;
+  --danger: #b42318;
+  --danger-soft: #fdecea;
+  --success: #12753a;
+  --success-soft: #e5f5eb;
+  --warning: #9a5b00;
+  --warning-soft: #fff4e0;
+  --ring: #0f6b5f55;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0e1116;
+    --surface: #161a21;
+    --surface-2: #1d222b;
+    --border: #2a303b;
+    --text: #e8ebf0;
+    --muted: #9aa3b2;
+    --primary: #2fae9c;
+    --primary-hover: #45c2b0;
+    --primary-soft: #143a35;
+    --primary-fg: #06201c;
+    --danger: #f2877d;
+    --danger-soft: #3a1714;
+    --success: #6fd394;
+    --success-soft: #12301e;
+    --warning: #f0b45a;
+    --warning-soft: #33250d;
+    --ring: #2fae9c66;
+  }
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-border: var(--border);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-soft: var(--primary-soft);
+  --color-primary-fg: var(--primary-fg);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+  --color-warning: var(--warning);
+  --color-warning-soft: var(--warning-soft);
+  --color-ring: var(--ring);
+  --font-sans: var(--font-app), ui-sans-serif, system-ui, "Segoe UI", Tahoma, sans-serif;
+}
+
+html {
+  color-scheme: light dark;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Keep emails, numbers and codes readable left-to-right inside Arabic text. */
+.ltr-text {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
